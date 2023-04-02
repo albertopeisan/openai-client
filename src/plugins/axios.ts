@@ -1,5 +1,5 @@
-import axios from 'axios'
 import type { App } from 'vue'
+import axios from 'axios'
 
 interface AxiosOptions {
   baseUrl?: string
@@ -7,12 +7,5 @@ interface AxiosOptions {
 }
 
 export default {
-  install: (app: App, options: AxiosOptions) => {
-    app.config.globalProperties.$axios = axios.create({
-      baseURL: options.baseUrl,
-      headers: {
-        Authorization: options.token ? `Bearer ${options.token}` : ''
-      }
-    })
-  }
+  install: (app: App, options: AxiosOptions) => {}
 }
