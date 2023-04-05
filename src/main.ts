@@ -6,20 +6,6 @@ import router from './router'
 import axios, { type AxiosInstance } from 'axios'
 import './assets/main.css'
 
-// Font Awesome Icons
-import { library } from '@fortawesome/fontawesome-svg-core'
-import {
-  faEllipsis,
-  faBars,
-  faXmark,
-  faHouse,
-  faComments,
-  faCircleInfo,
-  faCircleQuestion
-} from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-library.add(faEllipsis, faBars, faXmark, faHouse, faComments, faCircleInfo, faCircleQuestion)
-
 const app = createApp(App)
 
 app.use(createPinia())
@@ -30,6 +16,5 @@ const $axios: AxiosInstance = axios.create({
   withCredentials: false
 })
 app.provide('axios', $axios)
-app.component('font-awesome-icon', FontAwesomeIcon)
 
 app.mount('#app')
